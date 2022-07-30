@@ -41,30 +41,10 @@ function GenresInDb() {
                 <div className="card-body">Vallas para Escuelas</div>
               </div>
             </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Vallas para Conferencias</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">XXXX</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">XXXX</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">XXXXX</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 
