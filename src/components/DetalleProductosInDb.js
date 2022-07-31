@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import imagenFondo from "../assets/images/vallas-teatro.jpg";
 
 function LastMovieInDb({ route }) {
   const [producto, setProducto] = useState([]);
@@ -30,9 +29,9 @@ function LastMovieInDb({ route }) {
         <div className="card-body">
           <div className="text-center">
             <img
-              className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-              style={{ width: 40 + "rem" }}
-              src={imagenFondo}
+              className="px-3 px-sm-4 mt-3 mb-4"
+              style={{ width: 30 + "rem", objectFit: "contain" }}
+              src={producto.imagen}
               alt=" Vallas Teatro "
             />
           </div>

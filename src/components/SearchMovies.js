@@ -44,7 +44,7 @@ function SearchMovies() {
                             style={{
                               width: "90%",
                               height: "400px",
-                              objectFit: "cover",
+                              objectFit: "contain",
                             }}
                           />
                         </div>

@@ -4,14 +4,16 @@ import ProductsInDb from "./ProductsInDb";
 
 function ContentRowCenter() {
   return (
-    <div className="row">
+    <>
       <p>Último Producto Agregado</p>
-      {/*<!-- Last Movie in DB -->*/}
-      <DetalleProductosInDb route="products" />
-      {/*<!-- End content row last movie in Data Base -->*/}
-      {/*<!-- Genres in DB -->*/}
-      <ProductsInDb />
-    </div>
+      <div className="row">
+        {/*<!-- Last Movie in DB -->*/}
+        <DetalleProductosInDb route="products" />
+        {/*<!-- End content row last movie in Data Base -->*/}
+        {/*<!-- Genres in DB -->*/}
+        <ProductsInDb />
+      </div>
+    </>
   );
 }
 
