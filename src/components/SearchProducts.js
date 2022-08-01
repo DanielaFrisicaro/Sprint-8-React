@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-function SearchMovies() {
+function SearchProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("api/products")
@@ -11,7 +11,7 @@ function SearchMovies() {
   });
 
   // Credenciales de API
-  const apiKey = "http://localhost:3000/api/products"; // Intenta poner cualquier cosa antes para probar
+  const apiKey = "http://localhost:3000/api/products"; 
 
   return (
     <div className="container-fluid">
@@ -24,7 +24,7 @@ function SearchMovies() {
             <div className="col-12">
               <h2>Listado de Productos</h2>
             </div>
-            {/* Listado de películas */}
+            {/* Listado de productos */}
             {products.length > 0 &&
               products.map((product, i) => {
                 return (
@@ -57,17 +57,17 @@ function SearchMovies() {
           </div>
           {products.length === 0 && (
             <div className="alert alert-warning text-center">
-              No se encontraron películas
+              No se encontraron productos
             </div>
           )}
         </>
       ) : (
         <div className="alert alert-danger text-center my-4 fs-2">
-          Eyyyy... ¿PUSISTE TU APIKEY?
+        Falta la API KEY
         </div>
       )}
     </div>
   );
 }
 
-export default SearchMovies;
+export default SearchProducts;

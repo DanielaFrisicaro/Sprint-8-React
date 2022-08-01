@@ -1,21 +1,21 @@
 import React from 'react';
-import ContentRowCenter from './ContentRowCenter';
-import ContentRowMovies from './ContentRowMovies';
-import Chart from './Chart';
+import LastProductInDb from './LastProductInDb';
+import ContentRowProducts from './ContentRowProducts';
+
 
 function ContentRowTop(){
     return(
         <React.Fragment>
-				{/*<!-- Content Row Top -->*/}
+				{/*<!-- Ultimo Producto en Base de datos -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard Fence</h1>
 					</div>
 				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					<ContentRowCenter />
-					<Chart />
+					{/*<!-- Content Row Products-->*/}
+					<ContentRowProducts />
+					<LastProductInDb />
+				
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}

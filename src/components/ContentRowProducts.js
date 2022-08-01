@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
-// Creando estado de usuarios
-/*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+
+
 const url = "api";
+
+//PRUEBA CON ELEMENTOS ESTáTICOS SIN INCORPORAR LOS ESTADOS//
 // let Products = {
 //     title: 'Productos en la Base de Datos',
 //     color: 'danger',
@@ -12,7 +13,7 @@ const url = "api";
 //     icon: 'fa-clipboard-list'
 // }
 
-// /* <!-- Total awards --> */
+
 
 // let Users = {
 //     title:' Usuarios',
@@ -21,7 +22,7 @@ const url = "api";
 //     icon:'fa-user-check'
 // }
 
-// /* <!-- Actors quantity --> */
+
 
 // let Categories = {
 //     title:'Categorias' ,
@@ -32,7 +33,7 @@ const url = "api";
 
 // let cartProps = [Products, Users, Categories];
 
-function ContentRowMovies() {
+function ContentRowProducts() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch(`${url}/users`)
@@ -62,9 +63,7 @@ function ContentRowMovies() {
         title="Usuarios"
         cuantity={`${users.length}`}
       />
-      {/* {cartProps.map( (movie, i) => {
-                return <SmallCard {...movie} key={i}/> */}
-      {/* })} */}
+      
       <SmallCard
         color="danger"
         icon="fa-clipboard-list"
@@ -81,4 +80,4 @@ function ContentRowMovies() {
   );
 }
 
-export default ContentRowMovies;
+export default ContentRowProducts;

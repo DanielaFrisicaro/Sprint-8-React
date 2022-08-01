@@ -2,11 +2,11 @@ import React from "react";
 import image from "../assets/images/logo-fence-grey.svg";
 import ContentWrapper from "./ContentWrapper";
 import ProductsInDb from "./ProductsInDb";
-import DetalleProductosInDb from "./DetalleProductosInDb";
-import ContentRowMovies from "./ContentRowMovies";
+import ProductsDetailInDb from "./ProductsDetailInDb";
+import ContentRowProducts from "./ContentRowProducts";
 import NotFound from "./NotFound";
 import { Link, Route, Switch } from "react-router-dom";
-import SearchMovies from "./SearchMovies";
+import SearchProducts from "./SearchProducts";
 
 function SideBar() {
   return (
@@ -41,7 +41,7 @@ function SideBar() {
         {/*<!-- Heading -->*/}
         <div className="sidebar-heading">Actions</div>
 
-        {/*<!-- Nav Item - Pages -->*/}
+        {/*<!-- Nav Item - Productos -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/Products">
             <i className="fas fa-fw fa-folder"></i>
@@ -49,7 +49,7 @@ function SideBar() {
           </Link>
         </li>
 
-        {/*<!-- Nav Item - Charts -->*/}
+        {/*<!-- Nav Item - Detalle de Productos -->*/}
         <li className="nav-item">
           <Link className="nav-link" to="/ProductsDetail">
             <i className="fas fa-fw fa-chart-area"></i>
@@ -57,13 +57,14 @@ function SideBar() {
           </Link>
         </li>
 
-        {/*<!-- Nav Item - Tables -->*/}
+        {/*<!-- Nav Item - Tablas -->*/}
         <li className="nav-item nav-link">
           <Link className="nav-link" to="/TablasDB">
             <i className="fas fa-fw fa-table"></i>
             <span>Tablas</span>
           </Link>
         </li>
+        {/*<!-- Nav Item - Listado de Productos -->*/}
         <li className="nav-item nav-link">
           <Link className="nav-link" to="/ProductList">
             <i className="fas fa-fw fa-table"></i>
@@ -76,22 +77,7 @@ function SideBar() {
       </ul>
       {/*<!-- End of Sidebar -->*/}
 
-      {/*<!-- Microdesafio 1 -->*/}
-      {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-      {/*<!-- End Microdesafio 1 -->*/}
-
-      {/*<!-- End Microdesafio 2 -->*/}
+      
       <Switch>
         <Route exact path="/">
           <ContentWrapper />
@@ -100,17 +86,17 @@ function SideBar() {
           <ProductsInDb />
         </Route>
         <Route path="/ProductsDetail">
-          <DetalleProductosInDb />
+          <ProductsDetailInDb />
         </Route>
         <Route path="/TablasDB">
-          <ContentRowMovies />
+          <ContentRowProducts />
         </Route>
         <Route path="/ProductList">
-          <SearchMovies />
+          <SearchProducts />
         </Route>
         <Route component={NotFound} />
       </Switch>
-      {/*<!-- End Microdesafio 2 -->*/}
+     
     </React.Fragment>
   );
 }
