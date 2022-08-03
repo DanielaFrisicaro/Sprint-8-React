@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
 
-
-
-const url = "api";
-
 //PRUEBA CON ELEMENTOS ESTáTICOS SIN INCORPORAR LOS ESTADOS//
 // let Products = {
 //     title: 'Productos en la Base de Datos',
@@ -13,16 +9,12 @@ const url = "api";
 //     icon: 'fa-clipboard-list'
 // }
 
-
-
 // let Users = {
 //     title:' Usuarios',
 //     color:'danger',
 //     cuantity: '10',
 //     icon:'fa-user-check'
 // }
-
-
 
 // let Categories = {
 //     title:'Categorias' ,
@@ -36,24 +28,24 @@ const url = "api";
 function ContentRowProducts() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`${url}/users`)
+    fetch(`api/users`)
       .then((result) => result.json())
       .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
-  }, [users]);
+  }, []);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch(`${url}/products`)
+    fetch(`api/products`)
       .then((result) => result.json())
       .then((result) => setProducts(result.data))
       .catch((err) => console.log(err));
-  }, [products]);
+  }, []);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch("api/categories")
       .then((result) => result.json())
       .then((categories) => setCategories(categories));
-  });
+  }, []);
 
   return (
     <div className="row">
@@ -63,7 +55,7 @@ function ContentRowProducts() {
         title="Usuarios"
         cuantity={`${users.length}`}
       />
-      
+
       <SmallCard
         color="danger"
         icon="fa-clipboard-list"

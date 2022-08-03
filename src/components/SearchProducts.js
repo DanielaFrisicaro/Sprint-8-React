@@ -7,11 +7,11 @@ function SearchProducts() {
       .then((result) => {
         const { data } = result;
         setProducts(data);
-      });
+      }, []);
   });
 
   // Credenciales de API
-  const apiKey = "http://localhost:3000/api/products"; 
+  const apiKey = "http://localhost:3000/api/products";
 
   return (
     <div className="container-fluid">
@@ -43,7 +43,7 @@ function SearchProducts() {
                             alt={product.nombre}
                             style={{
                               width: "90%",
-                              height: "400px",
+                              height: "200px",
                               objectFit: "contain",
                             }}
                           />
@@ -63,7 +63,7 @@ function SearchProducts() {
         </>
       ) : (
         <div className="alert alert-danger text-center my-4 fs-2">
-        Falta la API KEY
+          Falta la API KEY
         </div>
       )}
     </div>

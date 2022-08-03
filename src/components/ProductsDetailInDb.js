@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
 
-function LastMovieInDb({ route }) {
+function LastMovieInDb() {
   const [producto, setProducto] = useState([]);
   useEffect(() => {
-    fetch(`api/${route}`)
+    fetch(`api/products`)
       .then((result) => result.json())
       .then((result) => result.data)
       .then((result) => {
-        const product = result.reduce((prev, current) => {
-          if (prev.id > current.id) {
-            return prev;
-          } else {
-            return current;
-          }
-        });
+        const product = result.reduce(
+          (prev, current) => {
+            if (prev.id > current.id) {
+              return prev;
+            } else {
+              return current;
+            }
+          },
+          [producto]
+        );
         setProducto(product);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
@@ -30,9 +33,9 @@ function LastMovieInDb({ route }) {
           <div className="text-center">
             <img
               className="px-3 px-sm-4 mt-3 mb-4"
-              style={{ width: 30 + "rem", objectFit: "contain" }}
+              style={{ width: 20 + "rem", objectFit: "contain" }}
               src={producto.imagen}
-              alt=" Vallas Teatro "
+              alt={`${producto.nombre}`}
             />
           </div>
           <p>{producto.descripcion}</p>

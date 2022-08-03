@@ -7,6 +7,7 @@ import ContentRowProducts from "./ContentRowProducts";
 import NotFound from "./NotFound";
 import { Link, Route, Switch } from "react-router-dom";
 import SearchProducts from "./SearchProducts";
+import Categories from "./Categories";
 
 function SideBar() {
   return (
@@ -71,13 +72,18 @@ function SideBar() {
             <span>Listado de Productos</span>
           </Link>
         </li>
+        <li className="nav-item nav-link">
+          <Link className="nav-link" to="/categories">
+            <i className="fas fa-fw fa-table"></i>
+            <span>Categorias</span>
+          </Link>
+        </li>
 
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider d-none d-md-block" />
       </ul>
       {/*<!-- End of Sidebar -->*/}
 
-      
       <Switch>
         <Route exact path="/">
           <ContentWrapper />
@@ -94,9 +100,11 @@ function SideBar() {
         <Route path="/ProductList">
           <SearchProducts />
         </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
         <Route component={NotFound} />
       </Switch>
-     
     </React.Fragment>
   );
 }
