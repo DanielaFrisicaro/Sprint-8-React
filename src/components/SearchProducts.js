@@ -57,7 +57,7 @@ function SearchProducts() {
           </div>
           {products.length === 0 && (
             <div className="alert alert-warning text-center">
-              No se encontraron productos
+              Cargando productos...
             </div>
           )}
         </>

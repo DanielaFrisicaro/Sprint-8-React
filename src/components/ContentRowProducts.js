@@ -48,26 +48,34 @@ function ContentRowProducts() {
   }, []);
 
   return (
-    <div className="row">
-      <SmallCard
-        color="danger"
-        icon="fa-user-check"
-        title="Usuarios"
-        cuantity={`${users.length}`}
-      />
-
-      <SmallCard
-        color="danger"
-        icon="fa-clipboard-list"
-        title="Productos"
-        cuantity={`${products.length}`}
-      />
-      <SmallCard
-        color="danger"
-        icon="far fa-list"
-        title="Categorías"
-        cuantity={`${categories.length}`}
-      />
+    <div className="container-fluid">
+      <p className="col-mt-5 col-pd-4">Vista General</p>
+      <div className="row">
+        <div className="col-12">
+          <SmallCard
+            color="danger"
+            icon="fa-user-check"
+            title="Usuarios"
+            cuantity={`${users.length}`}
+          />
+        </div>
+        <div className="col-12">
+          <SmallCard
+            color="danger"
+            icon="fa-clipboard-list"
+            title="Productos"
+            cuantity={`${products.length}`}
+          />
+        </div>
+        <div className="col-12">
+          <SmallCard
+            color="danger"
+            icon="far fa-list"
+            title="Categorías"
+            cuantity={`${categories.length}`}
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -42,16 +42,17 @@ const Categories = () => {
     <>
       <div>
         <div className="container-fluid">
-          <p>Categorias de Vallas</p>
-        </div>
-        <div className="row">
-          {categories.map((el, index) => (
-            <SmallCard
-              key={`${index}`}
-              title={`${el.nombre}`}
-              cuantity={`${cuantities[index]}`}
-            />
-          ))}
+          <div className="row">
+            <p>Categorias de Vallas</p>
+            {categories.map((el, index) => (
+              <div key={`${index}`} className="col-lg-12">
+                <SmallCard
+                  title={`${el.nombre}`}
+                  cuantity={`${cuantities[index]}`}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
