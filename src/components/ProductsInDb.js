@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function GenresInDb() {
+function ProductsInDb() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch("/api/categories")
@@ -31,4 +31,4 @@ function GenresInDb() {
   );
 }
 
-export default GenresInDb;
+export default ProductsInDb;

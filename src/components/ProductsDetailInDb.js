@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function LastMovieInDb() {
+function ProductsDetailInDb() {
   const [producto, setProducto] = useState([]);
   useEffect(() => {
     fetch(`api/products`)
@@ -49,4 +49,4 @@ function LastMovieInDb() {
   );
 }
 
-export default LastMovieInDb;
+export default ProductsDetailInDb;
