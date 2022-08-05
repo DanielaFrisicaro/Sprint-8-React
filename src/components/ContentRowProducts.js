@@ -53,7 +53,7 @@ function ContentRowProducts() {
       <div className="row">
         <div className="col-12">
           <SmallCard
-            color="danger"
+            color="warning"
             icon="fa-user-check"
             title="Usuarios"
             cuantity={`${users.length}`}
@@ -61,7 +61,7 @@ function ContentRowProducts() {
         </div>
         <div className="col-12">
           <SmallCard
-            color="danger"
+            color="warning"
             icon="fa-clipboard-list"
             title="Productos"
             cuantity={`${products.length}`}
@@ -69,7 +69,7 @@ function ContentRowProducts() {
         </div>
         <div className="col-12">
           <SmallCard
-            color="danger"
+            color="warning"
             icon="far fa-list"
             title="Categorías"
             cuantity={`${categories.length}`}

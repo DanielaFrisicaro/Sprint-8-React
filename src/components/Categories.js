@@ -49,7 +49,8 @@ const Categories = () => {
                 <SmallCard
                   title={`${el.nombre}`}
                   cuantity={`${cuantities[index]}`}
-                />
+                 />
+        
               </div>
             ))}
           </div>

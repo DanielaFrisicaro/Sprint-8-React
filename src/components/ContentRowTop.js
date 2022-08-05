@@ -9,7 +9,7 @@ function ContentRowTop(){
 				{/*<!-- Ultimo Producto en Base de datos -->*/}
 				<div className="container-fluid">
 					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard Fence</h1>
+						<h1 className="h3 mb-0 text-warning-800">App Dashboard Fence</h1>
 					</div>
 				
 					{/*<!-- Content Row Products-->*/}

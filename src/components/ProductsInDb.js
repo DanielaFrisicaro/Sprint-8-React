@@ -19,7 +19,7 @@ function ProductsInDb() {
           <div className="row">
             {categories.map((el, index) => (
               <div key={index} className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
+                <div className="card bg-warning text-white shadow">
                   <div className="card-body">{`Vallas ${el.nombre}`}</div>
                 </div>
               </div>
