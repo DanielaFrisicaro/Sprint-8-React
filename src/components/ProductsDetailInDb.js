@@ -38,7 +38,8 @@ function ProductsDetailInDb() {
               alt={`${producto.nombre}`}
             />
           </div>
-          <p>{producto.descripcion}</p>
+          {/*<!-- Content Row Products
+          <p>{producto.descripcion}</p>-->*/}
 
           <a className="btn btn-warning" target="_blank" rel="nofollow" href="/">
             Ver detalle de Productos

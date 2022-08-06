@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
+import imagenVallado from '../assets/images/pexels-ibrahim-boran-339814.jpg'
+
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -56,6 +58,7 @@ const Categories = () => {
   return (
     <>
       <div>
+     
         <div className="container-fluid">
           <div className="row-12" >
             <div className="row-12"  >
@@ -74,9 +77,9 @@ const Categories = () => {
             ))}
           </div>
           </div>
-          </div>
+          </div> 
         </div>
-     
+        
     </>
   );
 };
