@@ -43,19 +43,28 @@ const Categories = () => {
       setConstruccion(datos);
     }
   }, [products]);
+  const [residencial, setResidencial] = useState(0);
+  useEffect(() => {
+    if (products.length >= 1) {
+      const datos = products.filter((el) => el.id_categoria === 5);
+      setResidencial(datos);
+    }
+  }, [products]);
 
-
-
-  const cuantities = [peatonal.length, vial.length, eventos.length, construccion.length];
+  const cuantities = [peatonal.length, vial.length, eventos.length, construccion.length, residencial.length];
 
   return (
     <>
       <div>
         <div className="container-fluid">
-          <div className="row">
+          <div className="row-12" >
+            <div className="row-12"  >
+          
+
             <p>Categorias de Vallas</p>
             {categories.map((el, index) => (
               <div key={`${index}`} className="col-lg-12">
+              
                 <SmallCard
                   title={`${el.nombre}`}
                   cuantity={`${cuantities[index]}`}
@@ -64,8 +73,10 @@ const Categories = () => {
               </div>
             ))}
           </div>
+          </div>
+          </div>
         </div>
-      </div>
+     
     </>
   );
 };

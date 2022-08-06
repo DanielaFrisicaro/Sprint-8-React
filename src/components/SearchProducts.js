@@ -50,7 +50,7 @@ function SearchProducts() {
                             }}
                           />
                         </div>
-                        <p>{product.descripcion}</p>
+                       
                       </div>
                     </div>
                   </div>
