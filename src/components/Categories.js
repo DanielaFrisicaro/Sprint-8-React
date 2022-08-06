@@ -36,7 +36,17 @@ const Categories = () => {
       setEventos(datos);
     }
   }, [products]);
-  const cuantities = [peatonal.length, vial.length, eventos.length];
+  const [construccion, setConstruccion] = useState(0);
+  useEffect(() => {
+    if (products.length >= 1) {
+      const datos = products.filter((el) => el.id_categoria === 4);
+      setConstruccion(datos);
+    }
+  }, [products]);
+
+
+
+  const cuantities = [peatonal.length, vial.length, eventos.length, construccion.length];
 
   return (
     <>

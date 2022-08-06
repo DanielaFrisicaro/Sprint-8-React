@@ -51,7 +51,7 @@ function ContentRowProducts() {
     <div className="container-fluid">
       <p className="col-mt-5 col-pd-4">Vista General</p>
       <div className="row">
-        <div className="col-12">
+        <div className="col-3">
           <SmallCard
             color="warning"
             icon="fa-user-check"
@@ -60,7 +60,7 @@ function ContentRowProducts() {
             
           />
         </div>
-        <div className="col-12">
+        <div className="col-3">
           <SmallCard
             color="warning"
             icon="fa-clipboard-list"
@@ -68,7 +68,7 @@ function ContentRowProducts() {
             cuantity={`${products.length}`}
           />
         </div>
-        <div className="col-12">
+        <div className="col-3">
           <SmallCard
             color="warning"
             icon="far fa-list"
