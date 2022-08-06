@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
-import imagenVallado from '../assets/images/pexels-ibrahim-boran-339814.jpg'
+
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
