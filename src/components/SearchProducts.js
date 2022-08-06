@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+
 function SearchProducts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -58,6 +60,7 @@ function SearchProducts() {
           {products.length === 0 && (
             <div className="alert alert-warning text-center">
               Cargando productos...
+ 
             </div>
           )}
         </>

@@ -1,11 +1,13 @@
 import React from 'react';
-import imagenFondo from '../assets/images/valla-en-ciudad-05.jpeg';
+
+import imagen404 from '../assets/images/404_v02.webp'
 
 function NotFound(){
     return(
         <div className="text-center">
-            <h1>404 Not Found</h1>
-            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Valla Ciudad NOT FOUND "/>
+                  <h1> ERROR 404 - ALGO HA FALLADO</h1>
+          
+            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 55 +'rem'}} src={imagen404} alt=" ERROR 404 NOT FOUND "/>
         </div>
         
     )

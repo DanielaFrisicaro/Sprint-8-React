@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/logo-fence-grey.svg";
+import image from "../assets/images/logo-fence-white.svg";
 import ContentWrapper from "./ContentWrapper";
 import ProductsInDb from "./ProductsInDb";
 import ProductsDetailInDb from "./ProductsDetailInDb";
@@ -31,8 +31,8 @@ function SideBar() {
         {/*<!-- Nav Item - Dashboard -->*/}
         <li className="nav-item active">
           <Link className="nav-link" to="/">
-            <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - FENCE</span>
+          <i className="fas fa-fw fa-tachometer-alt "></i>
+          <span>Dashboard - FENCE</span>
           </Link>
         </li>
 
@@ -40,7 +40,7 @@ function SideBar() {
         <hr className="sidebar-divider" />
 
         {/*<!-- Heading -->*/}
-        <div className="sidebar-heading">Actions</div>
+        <div className="sidebar-heading"></div>
 
         {/*<!-- Nav Item - Productos -->*/}
         <li className="nav-item">

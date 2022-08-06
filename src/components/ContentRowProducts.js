@@ -57,6 +57,7 @@ function ContentRowProducts() {
             icon="fa-user-check"
             title="Usuarios"
             cuantity={`${users.length}`}
+            
           />
         </div>
         <div className="col-12">
