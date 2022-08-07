@@ -42,7 +42,7 @@ function ProductsDetailInDb() {
           <p>{producto.descripcion}</p>-->*/}
 
           <a className="btn btn-warning" target="_blank" rel="nofollow" href="/">
-            Ver detalle de Productos
+            Dashboard
           </a>
         </div>
       </div>
