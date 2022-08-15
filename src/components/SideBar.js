@@ -8,6 +8,7 @@ import NotFound from "./NotFound";
 import { Link, Route, Switch } from "react-router-dom";
 import SearchProducts from "./SearchProducts";
 import Categories from "./Categories";
+import SearchSuppliers from "./SearchSuppliers";
 
 function SideBar() {
   return (
@@ -72,6 +73,14 @@ function SideBar() {
             <span>Listado de Productos</span>
           </Link>
         </li>
+
+        <li className="nav-item nav-link">
+          <Link className="nav-link" to="/SuppliersList">
+            <i className="fas fa-fw fa-table"></i>
+            <span>Listado de Proveedores</span>
+          </Link>
+        </li>
+
         <li className="nav-item nav-link">
           <Link className="nav-link" to="/categories">
             <i className="fas fa-fw fa-table"></i>
@@ -100,8 +109,13 @@ function SideBar() {
         <Route path="/ProductList">
           <SearchProducts />
         </Route>
+
+        <Route path="/SuppliersList">
+          <SearchSuppliers />
+        </Route>
+
         <Route path="/categories">
-          <Categories />
+          <Categories />        
         </Route>
         <Route component={NotFound} />
       </Switch>
